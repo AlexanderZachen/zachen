@@ -1,0 +1,81 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "einstellungen"
+    label: "Website-Einstellungen"
+    files:
+
+      - name: "inhalt"
+        label: "Alle Inhalte bearbeiten"
+        file: "_data/inhalt.json"
+        fields:
+
+          - label: "--- ÜBER MICH ---"
+            name: "ueber_titel"
+            widget: "string"
+            default: "Heilung beginnt mit dem ganzen Menschen"
+
+          - label: "Über mich – Text 1"
+            name: "ueber_text1"
+            widget: "text"
+
+          - label: "Über mich – Text 2"
+            name: "ueber_text2"
+            widget: "text"
+
+          - label: "Zitat"
+            name: "zitat"
+            widget: "string"
+
+          - label: "--- TERMINE ---"
+            name: "termine_liste"
+            widget: "list"
+            label_singular: "Termin"
+            field:
+              label: "Datum (z.B. 06.12)"
+              name: "datum"
+              widget: "string"
+
+          - label: "Uhrzeit"
+            name: "termine_zeit"
+            widget: "string"
+            default: "Samstag, 10:00 – 19:30 Uhr"
+
+          - label: "Hinweis-Text (unter den Terminen)"
+            name: "termine_hinweis"
+            widget: "text"
+
+          - label: "--- KONTAKT ---"
+            name: "kontakt_name"
+            widget: "string"
+            default: "Christiane Zachen"
+
+          - label: "Adresse Leitzkau"
+            name: "kontakt_adresse1"
+            widget: "string"
+            default: "Kirchstrasse 1, 39279 Leitzkau"
+
+          - label: "Telefon Leitzkau"
+            name: "kontakt_tel1"
+            widget: "string"
+            default: "039241 908935"
+
+          - label: "E-Mail"
+            name: "kontakt_email"
+            widget: "string"
+            default: "post@zachen.de"
+
+          - label: "Adresse Dorst"
+            name: "kontakt_adresse2"
+            widget: "string"
+            default: "Dorfstrasse 8, 39638 Dorst"
+
+          - label: "Telefon Dorst"
+            name: "kontakt_tel2"
+            widget: "string"
+            default: "039058 970325"
